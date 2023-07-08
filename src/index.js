@@ -3,11 +3,15 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
 import HelloComponent from './HelloCompontnt';
+import ByeComponent from './ByeComponent'
+import IncrementDecrementComponent from './IncementDecrementCounter/IncrementDecrementComponent';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <HelloComponent />
+    {/* <HelloComponent name={"akash"} standard={"9th"}/> */}
+    {/* <ByeComponent /> */}
+    <IncrementDecrementComponent />
   </React.StrictMode>
 );
 
