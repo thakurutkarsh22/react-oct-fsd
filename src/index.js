@@ -11,6 +11,7 @@ root.render(
   <React.StrictMode>
     {/* <HelloComponent name={"akash"} standard={"9th"}/> */}
     {/* <ByeComponent /> */}
+    
     <IncrementDecrementComponent />
   </React.StrictMode>
 );

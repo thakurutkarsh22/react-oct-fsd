@@ -7,11 +7,22 @@ function HelloComponent(props) {
 
   console.log("debug props", props)
 
+
+  // UI -> User interface 
   return (
-   <div>
-      Hello guys  my name is {} and I study in asdasd {}.
-   </div>
+  <>
+    <div className='abcd'>
+        Hello guys  my name is {name} and I study in asdasd {}.
+    </div>
+
+    <h1 className='heading'>
+      asdasd
+    </h1>
+   </>
   );
+
+  // return React.createElement("fragmenrt", {div, h1}, "Hello guys  my name is")
+  // return React.createElement("h1", {}, "Hello guys  my name is")
 
 
 
