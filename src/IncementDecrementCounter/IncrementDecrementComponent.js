@@ -7,7 +7,7 @@ function IncrementDecrementComponent(props) {
 
     // State -> State variable can Re run the function again from top to bottom 
     // This variable can be shown on the Ui if it changes...
-    const [counter, setCounter] = useState(0)
+    let [counter, setCounter] = useState(0)
 
 
 
@@ -15,8 +15,17 @@ function IncrementDecrementComponent(props) {
     let number = 0
 
     const plusButtonHandler = () => {
+        // counter++; // This is we cant do 
 
-        setCounter(counter + 1)
+        // setCounter(counter + 5) // this is not 
+
+        for(let i = 0 ;i<1000;i++) {
+            // setCounter(counter + 1) // this code will NOT WORK 
+
+            setCounter((oldValCounter) => oldValCounter + 1 ) // this is working 
+
+        }
+        
        
        
         // // console.log("Plus increment clicked!!!")
@@ -64,9 +73,24 @@ export default IncrementDecrementComponent
 
 
 // useState() -> 
+/*
+    const[state, setState] = useState(0)
+
+    1. Always use setState(someVal)
+
+    2. DONT use setState when your new val is Dependent on the old Val
+    ex: setState(state + 1) // this is wrong 
+
+    instead use Callback function 
+    setState((oldVal) => oldVal + 1) // this is correct 
+
+    But this 2nd example is a tradeoff for the space i.e it takes more space 
+    that is why we should not over use it.
+
+*/
 
 
 // React renders again (re - run the component function) on 2 cases 
 
-// 1. Change in State  -> this is done 
-// 2. Change in props -> this is pending 
+// 1. Change in State  ->
+// 2. Change in props -> 

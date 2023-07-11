@@ -1,7 +1,11 @@
 import logo from './logo.svg';
 import './App.css';
+import { useState } from 'react';
 
 function HelloComponent(props) {
+
+  const [nameState, setName] = useState("")
+
 
   const {name, standard} = props;
 
@@ -12,12 +16,17 @@ function HelloComponent(props) {
   return (
   <>
     <div className='abcd'>
-        Hello guys  my name is {name} and I study in asdasd {}.
+        Hello guys  my name is {nameState} and I study in asdasd {}.
     </div>
 
     <h1 className='heading'>
       asdasd
     </h1>
+    
+    <button onClick={() => {
+      setName("utkarsh")
+    }}> SetName</button>
+
    </>
   );
 
