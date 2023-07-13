@@ -22,6 +22,8 @@ function App() {
 
             <ByeComponent user={name} />
 
+            <IncrementDecrementComponent />
+
             {/* Button That changes the name....  */}
 
             <button onClick={changeNameHandler}>Change Name</button>

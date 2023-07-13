@@ -2,6 +2,10 @@ import logo from './logo.svg';
 import './App.css';
 import { useState } from 'react';
 
+class ABC {
+
+}
+
 function HelloComponent(props) {
 
   const [nameState, setName] = useState("")
@@ -15,7 +19,7 @@ function HelloComponent(props) {
   // UI -> User interface 
   return (
   <>
-    <div className='abcd'>
+    <div style={{color: "red"}} className='abcd'>
         Hello guys  my name is {name} and I study in {standard}.
     </div>
 
@@ -61,4 +65,11 @@ export default HelloComponent;
 
 */
 
+
+
+/*
+  STYLING : 1. Inline Styling 
+  2. CSS file
+
+*/
 

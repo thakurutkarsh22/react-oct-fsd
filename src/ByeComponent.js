@@ -1,4 +1,5 @@
 import React from "react";
+import styles from "./ByeComponent.module.css"
 
 
 
@@ -10,7 +11,8 @@ function ByeComponent(props) {
 
     return (
         <React.Fragment>
-            <div>Bye !!!</div> 
+            {/* <div style={{color: "red", backgroundColor: "black"}}>Bye !!!</div>  */}
+            <div className={styles.bye}>Bye !!!</div> 
             <div>{user}</div>
         </React.Fragment>
     )

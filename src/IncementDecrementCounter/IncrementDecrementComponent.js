@@ -2,6 +2,7 @@
 // component
 
 import { useState } from "react"
+import styles from "./Incremnt.module.css"
 
 function IncrementDecrementComponent(props) {
 
@@ -42,7 +43,10 @@ function IncrementDecrementComponent(props) {
             <button onClick={plusButtonHandler}>+</button>
 
             {/* Label Number */}
-            {counter}
+            <div className={styles.counter}>
+                {counter}
+            </div>
+            
             {/* Decrement sign */}
             <button onClick={minusButtonHandler}>-</button>
 
