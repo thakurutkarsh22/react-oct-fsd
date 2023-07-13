@@ -2,14 +2,16 @@ import React from "react";
 
 
 
-function ByeComponent() {
+function ByeComponent(props) {
+
+    const {user} = props;
 
 //    return React.createElement("div", {}, "Data") // node
 
     return (
         <React.Fragment>
             <div>Bye !!!</div> 
-            <div>sfsfddsa</div>
+            <div>{user}</div>
         </React.Fragment>
     )
 

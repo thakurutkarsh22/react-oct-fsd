@@ -19,33 +19,23 @@ function IncrementDecrementComponent(props) {
 
         // setCounter(counter + 5) // this is not 
 
-        for(let i = 0 ;i<1000;i++) {
-            // setCounter(counter + 1) // this code will NOT WORK 
+        setCounter((oldValCounter) => oldValCounter + 1 )
 
-            setCounter((oldValCounter) => oldValCounter + 1 ) // this is working 
+        // for(let i = 0 ;i<1000;i++) {
+        //     // setCounter(counter + 1) // this code will NOT WORK 
 
-        }
-        
-       
-       
-        // // console.log("Plus increment clicked!!!")
-        // number = number + 1
+        //     setCounter((oldValCounter) => oldValCounter + 1 ) // this is working 
 
-        // console.log("number debug", number)
-
-        //force to run this function again 
+        // }
     }
 
     const minusButtonHandler = () => {
-
         setCounter(counter - 1)
 
-        // console.log("Minus decrement clicked!!!")
-        // number = number - 1
-        // console.log("number debug", number)
     }
-
     // UI
+
+
     return (
         <>
             {/* Incremetn sign */}
@@ -55,6 +45,10 @@ function IncrementDecrementComponent(props) {
             {counter}
             {/* Decrement sign */}
             <button onClick={minusButtonHandler}>-</button>
+
+            {counter < 0 ? (<div>
+                Hey there guys you are hitting the negative range
+            </div>) : null }
         </>
 
     )
@@ -90,7 +84,15 @@ export default IncrementDecrementComponent
 */
 
 
-// React renders again (re - run the component function) on 2 cases 
+// React renders again (re - run the component function) in 2 cases 
 
-// 1. Change in State  ->
-// 2. Change in props -> 
+// 1. Change in State  -> setCounter 
+// 2. Change in props -> when props change (it basically means parent is re-rendering again, and when parent re renders,
+// there are creation of HTML node and CUSTOM COmponent NODES again.
+// )
+
+
+// JAVASCRIPT EXPRESSION -> inside JSX -> yes 
+
+
+// COnditional rendering -> using if else...

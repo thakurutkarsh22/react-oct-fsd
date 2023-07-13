@@ -16,7 +16,7 @@ function HelloComponent(props) {
   return (
   <>
     <div className='abcd'>
-        Hello guys  my name is {nameState} and I study in asdasd {}.
+        Hello guys  my name is {name} and I study in {standard}.
     </div>
 
     <h1 className='heading'>

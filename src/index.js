@@ -5,16 +5,16 @@ import reportWebVitals from './reportWebVitals';
 import HelloComponent from './HelloCompontnt';
 import ByeComponent from './ByeComponent'
 import IncrementDecrementComponent from './IncementDecrementCounter/IncrementDecrementComponent';
+import App from './App';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 // This is where the vitual dom Root is created from the REAL DOm (Basically it is a light copy of real dom node...).
 
 root.render(
   <React.StrictMode>
-    {/* <HelloComponent name={"akash"} standard={"9th"}/> */}
-    {/* <ByeComponent /> */}
     
-    <IncrementDecrementComponent />
+    <App />
+    
   </React.StrictMode>
 );
 
