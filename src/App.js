@@ -2,6 +2,8 @@ import { useState } from "react"
 import ByeComponent from "./ByeComponent"
 import HelloComponent from "./HelloCompontnt"
 import IncrementDecrementComponent from "./IncementDecrementCounter/IncrementDecrementComponent"
+import Parent from "./childrenProp/Parent"
+import Child from "./childrenProp/Child"
 
 
 
@@ -20,13 +22,32 @@ function App() {
 
         <>
 
-            <ByeComponent user={name} />
+            {/* <ByeComponent user={name} />
 
             <IncrementDecrementComponent />
 
-            {/* Button That changes the name....  */}
 
-            <button onClick={changeNameHandler}>Change Name</button>
+            <button onClick={changeNameHandler}>Change Name</button> */}
+
+
+
+            {/* Children Props ....  */}
+
+
+            <Parent name={"utkarsh"}>
+                <Child />
+                <Child />
+                <h1>asaasdddasda</h1>
+                <p>sasdasda asdsad para</p>
+            </Parent>
+
+            
+
+            <div>
+                <h1>Headi1</h1>
+                <p>Para</p>
+            </div>
+            
         </>
         
     )
