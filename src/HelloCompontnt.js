@@ -73,3 +73,15 @@ export default HelloComponent;
 
 */
 
+
+
+/*
+  Difference Between Packages (React, React-Dom, React-Script)
+
+
+  React -> UI Management (By breaking UI into Components).
+  React-Dom -> This is responsibile for Showing the UI to the real DOM. 
+  React-Script -> Enables the Build of the Project, to Start the project basically it contains script to start few things.
+
+*/
+
