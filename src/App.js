@@ -6,13 +6,15 @@ import BeautifulWrapper from "./childrenProp/BueatifulWrapper"
 import Child from "./childrenProp/Child"
 import StudentDetail from "./StudentMarksComponent/StudentDetailComponent"
 import Hello from "./ClassComponentIntro/IncDecClassComponent"
+import MultipleState from "./MultipleState/MultipleState"
+import ParentCommunicatioin from "./Communication/Parent"
 
 
 
 function App() {
 
     // State .... name 
-    const [name, setName] = useState("User")
+    const [name, setName] = useState("User") // This info is of parent 
 
     const studentData = [
         {id: 1, name: "utkarsh", grade: 5, year: 2},
@@ -32,6 +34,9 @@ function App() {
     return (
 
         <>
+        {/* Bye component is child, App component is the PArent */}
+
+        {/* Parent talks to child Via the Props...  */}
 
             {/* <ByeComponent user={name} /> */}
 
@@ -102,7 +107,14 @@ function App() {
 
             {/* INTRO TO CLASS COMPOENTN */}
 
-            <Hello />
+            {/* <Hello />
+
+            <MultipleState /> */}
+
+
+            {/* Parent to child & Child to parent Communication */}
+
+            <ParentCommunicatioin />
             
             
         </>
