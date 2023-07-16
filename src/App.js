@@ -7,7 +7,9 @@ import Child from "./childrenProp/Child"
 import StudentDetail from "./StudentMarksComponent/StudentDetailComponent"
 import Hello from "./ClassComponentIntro/IncDecClassComponent"
 import MultipleState from "./MultipleState/MultipleState"
-import ParentCommunicatioin from "./Communication/Parent"
+import ParentCommunicatioin from "./Communication/ChildToParent/Parent"
+import Parent from "./Communication/ChildTOChild/parent"
+
 
 
 
@@ -114,7 +116,12 @@ function App() {
 
             {/* Parent to child & Child to parent Communication */}
 
-            <ParentCommunicatioin />
+            {/* <ParentCommunicatioin /> */}
+
+
+            {/* child to child Communication  */}
+
+            <Parent />
             
             
         </>

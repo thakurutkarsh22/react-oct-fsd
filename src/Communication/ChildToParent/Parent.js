@@ -1,5 +1,5 @@
 import { useState } from "react";
-import ChildCommunication from "./Child";
+import ChildCommunication from "./Child1";
 
 
 function ParentCommunicatioin() {
