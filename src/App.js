@@ -5,6 +5,7 @@ import IncrementDecrementComponent from "./IncementDecrementCounter/IncrementDec
 import BeautifulWrapper from "./childrenProp/BueatifulWrapper"
 import Child from "./childrenProp/Child"
 import StudentDetail from "./StudentMarksComponent/StudentDetailComponent"
+import Hello from "./ClassComponentIntro/IncDecClassComponent"
 
 
 
@@ -79,11 +80,11 @@ function App() {
             <StudentDetail name={"Aditya"} grade={9} year={1}/>
             <StudentDetail name={"Aditya"} grade={9} year={1}/> */}
 
-            {studentData.map((student, index) => {
+            {/* {studentData.map((student, index) => {
                 const {name, grade, year, id} = student;
                 
                 return <StudentDetail key={index} name={name} grade={grade} year={year}/>
-            })}
+            })} */}
 
             {/* Key Props should be unique for each Child in the list 
                 Key props is used for the Performance only (By react)
@@ -95,6 +96,13 @@ function App() {
                 read this article: https://robinpokorny.com/blog/index-as-a-key-is-an-anti-pattern/
             
             */}
+
+
+
+
+            {/* INTRO TO CLASS COMPOENTN */}
+
+            <Hello />
             
             
         </>
