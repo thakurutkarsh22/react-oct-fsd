@@ -20,9 +20,6 @@ function BeautifulWrapper(props) {
             <div style={{color: "red"}}>
                 {children}
             </div>
-
-            
-            
             {number}
             
         </>

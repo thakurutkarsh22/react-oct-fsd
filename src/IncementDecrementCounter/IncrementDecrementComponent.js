@@ -31,7 +31,7 @@ function IncrementDecrementComponent(props) {
     }
 
     const minusButtonHandler = () => {
-        setCounter(counter - 1)
+        setCounter((oldCounter) => oldCounter - 1)
 
     }
     // UI
@@ -43,7 +43,7 @@ function IncrementDecrementComponent(props) {
             <button onClick={plusButtonHandler}>+</button>
 
             {/* Label Number */}
-            <div className={styles.counter}>
+            <div className={counter < 0 ? styles.counterDanger :  styles.counter}>
                 {counter}
             </div>
             
@@ -100,3 +100,5 @@ export default IncrementDecrementComponent
 
 
 // COnditional rendering -> using if else...
+
+// Conditional Styling -> using If else.. 
