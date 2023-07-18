@@ -18,7 +18,7 @@ function Parent() {
         <>
             <div className={styles.parentContainer}>
                 <Child1 child1CommunicationHandler={child1CommunicationHandler} />
-
+                    I am parent
                 <Child2 isIncOrDec={info}/>
             </div>
             

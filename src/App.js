@@ -9,6 +9,7 @@ import Hello from "./ClassComponentIntro/IncDecClassComponent"
 import MultipleState from "./MultipleState/MultipleState"
 import ParentCommunicatioin from "./Communication/ChildToParent/Parent"
 import Parent from "./Communication/ChildTOChild/parent"
+import Forms from "./Forms/Froms"
 
 
 
@@ -121,7 +122,13 @@ function App() {
 
             {/* child to child Communication  */}
 
-            <Parent />
+            {/* <Parent /> */}
+
+
+
+            {/* FORMS */}
+
+            <Forms />
             
             
         </>
