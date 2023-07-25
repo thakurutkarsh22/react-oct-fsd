@@ -10,6 +10,8 @@ import MultipleState from "./MultipleState/MultipleState"
 import ParentCommunicatioin from "./Communication/ChildToParent/Parent"
 import Parent from "./Communication/ChildTOChild/parent"
 import Forms from "./Forms/Froms"
+import { Formik } from "formik"
+import FormikForm from "./Forms/FormikForm"
 
 
 
@@ -128,7 +130,8 @@ function App() {
 
             {/* FORMS */}
 
-            <Forms />
+            {/* <Forms /> */}
+            <FormikForm />
             
             
         </>

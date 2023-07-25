@@ -132,7 +132,7 @@ function Forms() {
         // validated for email 
         
         if(inputKey === "email") {
-            const emailRegex = /[a-z0-9]+@[a-z]+\.[a-z]{2,3}/;
+            const emailRegex = /[a-z0-9]+@[a-z]+\.[a-z]{2,3}/; // onion routers
 
             if(value && value.match(emailRegex)) {
                 localError[inputKey] = "";
