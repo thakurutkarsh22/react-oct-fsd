@@ -27,18 +27,20 @@ export default function Macbook() {
           const isCardSelected = index === selectedIndex;
 
           return (
-            <Card
-              id={id}
-              clickhandler={changeHandler}
-              isCardSelected={isCardSelected}
-              name={name}
-              price={price}
-            />
+            <div>
+              <Card
+                id={id}
+                clickhandler={changeHandler}
+                isCardSelected={isCardSelected}
+                name={name}
+                price={price}
+              />
+            </div>
           );
         })}
-      </div>
 
-      {/* <p id="finalPrice">Price : {price}/-</p> */}
+        <p id="finalPrice">Price : {dataArray[selectedIndex].price}/-</p>
+      </div>
 
       {/* <Card /> */}
     </div>
