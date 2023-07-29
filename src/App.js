@@ -12,6 +12,7 @@ import Parent from "./Communication/ChildTOChild/parent"
 import Forms from "./Forms/Froms"
 import { Formik } from "formik"
 import FormikForm from "./Forms/FormikForm"
+import Macbook from "./ASSIGNMENTS/BuyMeMacBook"
 
 
 
@@ -131,7 +132,14 @@ function App() {
             {/* FORMS */}
 
             {/* <Forms /> */}
-            <FormikForm />
+            {/* <FormikForm /> */}
+
+
+
+
+            {/* ASSIGNMENT */}
+
+            <Macbook />
             
             
         </>
