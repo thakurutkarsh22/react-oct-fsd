@@ -1,77 +1,67 @@
-import { useState } from "react"
-import ByeComponent from "./ByeComponent"
-import HelloComponent from "./HelloCompontnt"
-import IncrementDecrementComponent from "./IncementDecrementCounter/IncrementDecrementComponent"
-import BeautifulWrapper from "./childrenProp/BueatifulWrapper"
-import Child from "./childrenProp/Child"
-import StudentDetail from "./StudentMarksComponent/StudentDetailComponent"
-import Hello from "./ClassComponentIntro/IncDecClassComponent"
-import MultipleState from "./MultipleState/MultipleState"
-import ParentCommunicatioin from "./Communication/ChildToParent/Parent"
-import Parent from "./Communication/ChildTOChild/parent"
-import Forms from "./Forms/Froms"
-import { Formik } from "formik"
-import FormikForm from "./Forms/FormikForm"
-import Macbook from "./ASSIGNMENTS/BuyMeMacBook"
-
-
-
+import { useState } from "react";
+import ByeComponent from "./ByeComponent";
+import HelloComponent from "./HelloCompontnt";
+import IncrementDecrementComponent from "./IncementDecrementCounter/IncrementDecrementComponent";
+import BeautifulWrapper from "./childrenProp/BueatifulWrapper";
+import Child from "./childrenProp/Child";
+import StudentDetail from "./StudentMarksComponent/StudentDetailComponent";
+import Hello from "./ClassComponentIntro/IncDecClassComponent";
+import MultipleState from "./MultipleState/MultipleState";
+import ParentCommunicatioin from "./Communication/ChildToParent/Parent";
+import Parent from "./Communication/ChildTOChild/parent";
+import Forms from "./Forms/Froms";
+import { Formik } from "formik";
+import FormikForm from "./Forms/FormikForm";
+import Macbook from "./ASSIGNMENTS/BuyMeMacBook";
+import PokeApiFun from "./Pokemon/PokeApiFunc";
 
 function App() {
+  // State .... name
+  const [name, setName] = useState("User"); // This info is of parent
 
-    // State .... name 
-    const [name, setName] = useState("User") // This info is of parent 
+  const [unmountComp, setunmountComp] = useState(true);
 
-    const studentData = [
-        {id: 1, name: "utkarsh", grade: 5, year: 2},
-        {id: 2, name: "AKASH", grade: 8, year: 1},
-        {id: 3, name: "Rohit", grade: 3, year: 2},
-        {id: 4, name: "Aman", grade: 7, year: 3},
-        {id: 5, name: "Akshita", grade: 2, year: 4},
-        {id: 6, name: "Ankit", grade: 10, year: 4}
-   ] 
+  const studentData = [
+    { id: 1, name: "utkarsh", grade: 5, year: 2 },
+    { id: 2, name: "AKASH", grade: 8, year: 1 },
+    { id: 3, name: "Rohit", grade: 3, year: 2 },
+    { id: 4, name: "Aman", grade: 7, year: 3 },
+    { id: 5, name: "Akshita", grade: 2, year: 4 },
+    { id: 6, name: "Ankit", grade: 10, year: 4 },
+  ];
 
-    const changeNameHandler = () => {
-        setName("Akash")
-    }
+  const changeNameHandler = () => {
+    setName("Akash");
+  };
 
+  // UI - Render method
+  return (
+    <>
+      {/* Bye component is child, App component is the PArent */}
 
-    // UI - Render method 
-    return (
+      {/* Parent talks to child Via the Props...  */}
 
-        <>
-        {/* Bye component is child, App component is the PArent */}
+      {/* <ByeComponent user={name} /> */}
 
-        {/* Parent talks to child Via the Props...  */}
+      {/* <IncrementDecrementComponent /> */}
 
-            {/* <ByeComponent user={name} /> */}
+      {/* <button onClick={changeNameHandler}>Change Name</button> */}
 
-            {/* <IncrementDecrementComponent /> */}
+      {/* Children Props ....  */}
 
-
-            {/* <button onClick={changeNameHandler}>Change Name</button> */}
-
-
-
-            {/* Children Props ....  */}
-
-
-            {/* <Parent name={"utkarsh"}>
+      {/* <Parent name={"utkarsh"}>
                 <Child />
                 <Child />
                 <h1>asaasdddasda</h1>
                 <p>sasdasda asdsad para</p>
             </Parent> */}
 
-            {/* <BeautifulWrapper name={"utkarsh"}>
+      {/* <BeautifulWrapper name={"utkarsh"}>
                 <Child />
                 <Child />
             </BeautifulWrapper> */}
 
-            
-
-            
-{/* 
+      {/* 
             <div>
                 <h1>Headi1</h1>
                 <h1>Headi1</h1>
@@ -80,24 +70,22 @@ function App() {
                 <p>Para</p>
             </div> */}
 
+      {/* Student Detail Card */}
 
-            {/* Student Detail Card */}
-            
-            
-            {/* <StudentDetail name={"utkarsh"} grade={5} year={4}/>
+      {/* <StudentDetail name={"utkarsh"} grade={5} year={4}/>
             <StudentDetail name={"Akash"} grade={3} year={3}/>
             <StudentDetail name={"Amit"} grade={2} year={2}/>
             <StudentDetail name={"Chandan"} grade={1} year={1}/>
             <StudentDetail name={"Aditya"} grade={9} year={1}/>
             <StudentDetail name={"Aditya"} grade={9} year={1}/> */}
 
-            {/* {studentData.map((student, index) => {
+      {/* {studentData.map((student, index) => {
                 const {name, grade, year, id} = student;
                 
                 return <StudentDetail key={index} name={name} grade={grade} year={year}/>
             })} */}
 
-            {/* Key Props should be unique for each Child in the list 
+      {/* Key Props should be unique for each Child in the list 
                 Key props is used for the Performance only (By react)
 
 
@@ -108,50 +96,50 @@ function App() {
             
             */}
 
+      {/* INTRO TO CLASS COMPOENTN */}
 
-
-
-            {/* INTRO TO CLASS COMPOENTN */}
-
-            {/* <Hello />
+      {/* <Hello />
 
             <MultipleState /> */}
 
+      {/* Parent to child & Child to parent Communication */}
 
-            {/* Parent to child & Child to parent Communication */}
+      {/* <ParentCommunicatioin /> */}
 
-            {/* <ParentCommunicatioin /> */}
+      {/* child to child Communication  */}
 
+      {/* <Parent /> */}
 
-            {/* child to child Communication  */}
+      {/* FORMS */}
 
-            {/* <Parent /> */}
+      {/* <Forms /> */}
+      {/* <FormikForm /> */}
 
+      {/* ASSIGNMENT */}
 
+      {/* <Macbook /> */}
 
-            {/* FORMS */}
+      {/* Pokemon APi  */}
 
-            {/* <Forms /> */}
-            {/* <FormikForm /> */}
+      {unmountComp && <PokeApiFun />}
 
-
-
-
-            {/* ASSIGNMENT */}
-
-            <Macbook />
-            
-            
-        </>
-        
-    )
+      <button onClick={() => setunmountComp((old) => !old)}>
+        unmountComponent
+      </button>
+    </>
+  );
 }
 
-export default App
+export default App;
 
-{/* <HelloComponent name={"akash"} standard={"9th"}/> */}
-    
-    
-    {/* <ByeComponent /> */}
-    
-{/* <IncrementDecrementComponent /> */}
+{
+  /* <HelloComponent name={"akash"} standard={"9th"}/> */
+}
+
+{
+  /* <ByeComponent /> */
+}
+
+{
+  /* <IncrementDecrementComponent /> */
+}
