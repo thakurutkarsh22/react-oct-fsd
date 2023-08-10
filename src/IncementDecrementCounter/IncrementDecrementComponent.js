@@ -1,76 +1,65 @@
-
 // component
 
-import { useState } from "react"
-import styles from "./Incremnt.module.css"
+import { useState } from "react";
+import styles from "./Incremnt.module.css";
 
 function IncrementDecrementComponent(props) {
+  // State -> State variable can Re run the function again from top to bottom
+  // This variable can be shown on the Ui if it changes...
+  let [counter, setCounter] = useState(0);
+  //   let [name, setCounter] = useState(0);
 
-    // State -> State variable can Re run the function again from top to bottom 
-    // This variable can be shown on the Ui if it changes...
-    let [counter, setCounter] = useState(0)
+  // variables -> CANT Re-run the function again from top to bottom
+  let number = 0;
 
+  const plusButtonHandler = () => {
+    // counter++; // This is we cant do
 
+    // setCounter(counter + 5) // this is not
 
-    // variables -> CANT Re-run the function again from top to bottom  
-    let number = 0
+    setCounter((oldValCounter) => oldValCounter + 1);
 
-    const plusButtonHandler = () => {
-        // counter++; // This is we cant do 
+    // for(let i = 0 ;i<1000;i++) {
+    //     // setCounter(counter + 1) // this code will NOT WORK
 
-        // setCounter(counter + 5) // this is not 
+    //     setCounter((oldValCounter) => oldValCounter + 1 ) // this is working
 
-        setCounter((oldValCounter) => oldValCounter + 1 )
+    // }
+  };
 
-        // for(let i = 0 ;i<1000;i++) {
-        //     // setCounter(counter + 1) // this code will NOT WORK 
+  const minusButtonHandler = () => {
+    setCounter((oldCounter) => oldCounter - 1);
+  };
+  // UI
 
-        //     setCounter((oldValCounter) => oldValCounter + 1 ) // this is working 
+  return (
+    <>
+      {/* Incremetn sign */}
+      <button onClick={plusButtonHandler}>+</button>
 
-        // }
-    }
+      {/* Label Number */}
+      <div className={counter < 0 ? styles.counterDanger : styles.counter}>
+        {counter}
+      </div>
 
-    const minusButtonHandler = () => {
-        setCounter((oldCounter) => oldCounter - 1)
+      {/* Decrement sign */}
+      <button onClick={minusButtonHandler}>-</button>
 
-    }
-    // UI
-
-
-    return (
-        <>
-            {/* Incremetn sign */}
-            <button onClick={plusButtonHandler}>+</button>
-
-            {/* Label Number */}
-            <div className={counter < 0 ? styles.counterDanger :  styles.counter}>
-                {counter}
-            </div>
-            
-            {/* Decrement sign */}
-            <button onClick={minusButtonHandler}>-</button>
-
-            {counter < 0 ? (<div>
-                Hey there guys you are hitting the negative range
-            </div>) : null }
-        </>
-
-    )
-
+      {counter < 0 ? (
+        <div>Hey there guys you are hitting the negative range</div>
+      ) : null}
+    </>
+  );
 }
 
+export default IncrementDecrementComponent;
 
-export default IncrementDecrementComponent
+// Problem -> I am returning only 1 time from the Function.
 
+// Solution -> to make sure you are re running the function on EVERY click so that it
+// returns the UPDATED UI
 
-
-// Problem -> I am returning only 1 time from the Function. 
-
-// Solution -> to make sure you are re running the function on EVERY click so that it 
-// returns the UPDATED UI 
-
-
-// useState() -> 
+// useState() ->
 /*
     const[state, setState] = useState(0)
 
@@ -87,18 +76,15 @@ export default IncrementDecrementComponent
 
 */
 
+// React renders again (re - run the component function) in 2 cases
 
-// React renders again (re - run the component function) in 2 cases 
-
-// 1. Change in State  -> setCounter 
+// 1. Change in State  -> setCounter
 // 2. Change in props -> when props change (it basically means parent is re-rendering again, and when parent re renders,
 // there are creation of HTML node and CUSTOM COmponent NODES again.
 // )
 
-
-// JAVASCRIPT EXPRESSION -> inside JSX -> yes 
-
+// JAVASCRIPT EXPRESSION -> inside JSX -> yes
 
 // COnditional rendering -> using if else...
 
-// Conditional Styling -> using If else.. 
+// Conditional Styling -> using If else..

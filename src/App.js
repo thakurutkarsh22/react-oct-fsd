@@ -5,7 +5,7 @@ import IncrementDecrementComponent from "./IncementDecrementCounter/IncrementDec
 import BeautifulWrapper from "./childrenProp/BueatifulWrapper";
 import Child from "./childrenProp/Child";
 import StudentDetail from "./StudentMarksComponent/StudentDetailComponent";
-import Hello from "./ClassComponentIntro/IncDecClassComponent";
+import Hello from "./ClassComponentIntro/BasicClass";
 import MultipleState from "./MultipleState/MultipleState";
 import ParentCommunicatioin from "./Communication/ChildToParent/Parent";
 import Parent from "./Communication/ChildTOChild/parent";
@@ -14,6 +14,7 @@ import { Formik } from "formik";
 import FormikForm from "./Forms/FormikForm";
 import Macbook from "./ASSIGNMENTS/BuyMeMacBook";
 import PokeApiFun from "./Pokemon/PokeApiFunc";
+import IncDecCounterClass from "./ClassComponentIntro/IncDecCounter";
 
 function App() {
   // State .... name
@@ -121,11 +122,15 @@ function App() {
 
       {/* Pokemon APi  */}
 
-      {unmountComp && <PokeApiFun />}
+      {/* {unmountComp && <PokeApiFun />}
 
       <button onClick={() => setunmountComp((old) => !old)}>
         unmountComponent
-      </button>
+      </button> */}
+
+      {/* Class compoenent Set state, props, state */}
+
+      <IncDecCounterClass name={"akash"} rollNumber={12} />
     </>
   );
 }
