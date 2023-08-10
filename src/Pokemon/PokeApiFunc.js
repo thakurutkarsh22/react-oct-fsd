@@ -33,6 +33,7 @@ function PokeApiFun() {
     };
   }
 
+  //   fetch , LocalStorage operations, (anything blocking the UI)
   useEffect(() => {
     console.log("fetch data");
     fetch(url)

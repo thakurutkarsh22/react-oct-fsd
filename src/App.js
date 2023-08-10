@@ -15,6 +15,8 @@ import FormikForm from "./Forms/FormikForm";
 import Macbook from "./ASSIGNMENTS/BuyMeMacBook";
 import PokeApiFun from "./Pokemon/PokeApiFunc";
 import IncDecCounterClass from "./ClassComponentIntro/IncDecCounter";
+import HooksExplained from "./FuncationalCOmponentIntro/HooksExplained";
+import LifeCycle from "./ClassComponentIntro/LifeCycle";
 
 function App() {
   // State .... name
@@ -130,7 +132,13 @@ function App() {
 
       {/* Class compoenent Set state, props, state */}
 
-      <IncDecCounterClass name={"akash"} rollNumber={12} />
+      {/* <IncDecCounterClass name={"akash"} rollNumber={12} /> */}
+
+      {/* Hooks explained */}
+
+      {/* <HooksExplained /> */}
+
+      <LifeCycle />
     </>
   );
 }
