@@ -17,6 +17,7 @@ import PokeApiFun from "./Pokemon/PokeApiFunc";
 import IncDecCounterClass from "./ClassComponentIntro/IncDecCounter";
 import HooksExplained from "./FuncationalCOmponentIntro/HooksExplained";
 import LifeCycle from "./ClassComponentIntro/LifeCycle";
+import PokeApiClass from "./Pokemon/PokeApiClass";
 
 function App() {
   // State .... name
@@ -41,29 +42,21 @@ function App() {
   return (
     <>
       {/* Bye component is child, App component is the PArent */}
-
       {/* Parent talks to child Via the Props...  */}
-
       {/* <ByeComponent user={name} /> */}
-
       {/* <IncrementDecrementComponent /> */}
-
       {/* <button onClick={changeNameHandler}>Change Name</button> */}
-
       {/* Children Props ....  */}
-
       {/* <Parent name={"utkarsh"}>
                 <Child />
                 <Child />
                 <h1>asaasdddasda</h1>
                 <p>sasdasda asdsad para</p>
             </Parent> */}
-
       {/* <BeautifulWrapper name={"utkarsh"}>
                 <Child />
                 <Child />
             </BeautifulWrapper> */}
-
       {/* 
             <div>
                 <h1>Headi1</h1>
@@ -72,22 +65,18 @@ function App() {
                 <h1>Headi1</h1>
                 <p>Para</p>
             </div> */}
-
       {/* Student Detail Card */}
-
       {/* <StudentDetail name={"utkarsh"} grade={5} year={4}/>
             <StudentDetail name={"Akash"} grade={3} year={3}/>
             <StudentDetail name={"Amit"} grade={2} year={2}/>
             <StudentDetail name={"Chandan"} grade={1} year={1}/>
             <StudentDetail name={"Aditya"} grade={9} year={1}/>
             <StudentDetail name={"Aditya"} grade={9} year={1}/> */}
-
       {/* {studentData.map((student, index) => {
                 const {name, grade, year, id} = student;
                 
                 return <StudentDetail key={index} name={name} grade={grade} year={year}/>
             })} */}
-
       {/* Key Props should be unique for each Child in the list 
                 Key props is used for the Performance only (By react)
 
@@ -98,47 +87,36 @@ function App() {
                 read this article: https://robinpokorny.com/blog/index-as-a-key-is-an-anti-pattern/
             
             */}
-
       {/* INTRO TO CLASS COMPOENTN */}
-
       {/* <Hello />
 
             <MultipleState /> */}
-
       {/* Parent to child & Child to parent Communication */}
-
       {/* <ParentCommunicatioin /> */}
-
       {/* child to child Communication  */}
-
       {/* <Parent /> */}
-
       {/* FORMS */}
-
       {/* <Forms /> */}
       {/* <FormikForm /> */}
-
       {/* ASSIGNMENT */}
-
       {/* <Macbook /> */}
-
       {/* Pokemon APi  */}
+      {/* {unmountComp && <PokeApiFun />} */}
 
-      {/* {unmountComp && <PokeApiFun />}
-
+      {/* // <button onClick={() => setunmountComp((old) => !old)}>
+      //   unmountComponent
+      // </button> */}
+      {/* Class compoenent Set state, props, state */}
+      {/* <IncDecCounterClass name={"akash"} rollNumber={12} /> */}
+      {/* Hooks explained */}
+      {/* <HooksExplained /> */}
+      {/* {unmountComp && <LifeCycle />}
       <button onClick={() => setunmountComp((old) => !old)}>
         unmountComponent
-      </button> */}
+      </button>
+      App component */}
 
-      {/* Class compoenent Set state, props, state */}
-
-      {/* <IncDecCounterClass name={"akash"} rollNumber={12} /> */}
-
-      {/* Hooks explained */}
-
-      {/* <HooksExplained /> */}
-
-      <LifeCycle />
+      <PokeApiClass />
     </>
   );
 }

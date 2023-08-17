@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 
 function PokeApiFun() {
+  // update phase
   console.log("rendering debug");
 
   const [pokemonChoice, setPokemonChoice] = useState("pikachu");

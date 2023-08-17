@@ -9,9 +9,20 @@ class LifeCycle extends React.Component {
     console.log("constructor");
   }
 
-  //   useEffect
+  //   useEffect -> ONLY WORKS IN MOUNTING PHASE
   componentDidMount() {
-    console.log("componentDidMount");
+    console.log("component Did Mount");
+  }
+
+  // useEffect -> ONLY WORKS IN UPDATE PHASE
+  componentDidUpdate() {
+    console.log("component Did Update");
+  }
+
+  // USE EFFECT (return cleanup part) -> ONLY WORKS IN UNMOUNTING PHASE
+  componentWillUnmount() {
+    // In here you can do clean up...
+    console.log("component will unmount");
   }
 
   clickHandler = () => {
@@ -22,10 +33,15 @@ class LifeCycle extends React.Component {
     console.log("render");
 
     return (
-      <>
+      <div style={{ border: "1px solid black", padding: "16px" }}>
         <button onClick={this.clickHandler}>Change the state</button>
         {this.state.num}
-      </>
+
+        <br></br>
+        <br></br>
+        <br></br>
+        <div>LICYCLE COPMOnenT</div>
+      </div>
     );
   }
 }
