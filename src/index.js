@@ -8,6 +8,8 @@ import IncrementDecrementComponent from "./IncementDecrementCounter/IncrementDec
 import App from "./App";
 import RouteApp from "./RouteApp/RouteApp";
 import { BrowserRouter } from "react-router-dom";
+import ContextApi from "./ContextApi/ContextApi";
+import AppContextApi from "./ASSIGNMENTS/ContextApi/components/App";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 // This is where the vitual dom Root is created from the REAL DOm (Basically it is a light copy of real dom node...).
@@ -15,9 +17,17 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     {/* <App /> */}
-    <BrowserRouter>
+    {/* <BrowserRouter>
       <RouteApp />
-    </BrowserRouter>
+    </BrowserRouter> */}
+
+    {/* COntext api Undestanding  */}
+
+    {/* <ContextApi /> */}
+
+    {/* Assignment Section  */}
+
+    <AppContextApi />
   </React.StrictMode>
 );
 
