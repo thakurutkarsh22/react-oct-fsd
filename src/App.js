@@ -18,6 +18,10 @@ import IncDecCounterClass from "./ClassComponentIntro/IncDecCounter";
 import HooksExplained from "./FuncationalCOmponentIntro/HooksExplained";
 import LifeCycle from "./ClassComponentIntro/LifeCycle";
 import PokeApiClass from "./Pokemon/PokeApiClass";
+import CounterRef from "./UnderstandingRef/BasicRef/CounterRef";
+import FormUi from "./UnderstandingRef/FormUI/FormUI";
+import PortalDialogBox from "./Portal/Portal";
+import CounterReducer from "./ClassComponentIntro/IncDecCounterReducer";
 
 function App() {
   // State .... name
@@ -116,7 +120,17 @@ function App() {
       </button>
       App component */}
 
-      <PokeApiClass />
+      {/* <PokeApiClass /> */}
+
+      {/* UNDERSTANDING REF */}
+
+      {/* <CounterRef /> */}
+
+      {/* <FormUi /> */}
+
+      {/* USE REDUCER EXPLANATION */}
+
+      <CounterReducer />
     </>
   );
 }
