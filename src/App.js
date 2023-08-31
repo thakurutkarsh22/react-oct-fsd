@@ -22,6 +22,8 @@ import CounterRef from "./UnderstandingRef/BasicRef/CounterRef";
 import FormUi from "./UnderstandingRef/FormUI/FormUI";
 import PortalDialogBox from "./Portal/Portal";
 import CounterReducer from "./ClassComponentIntro/IncDecCounterReducer";
+import BasicComponent from "./Performance/basics/basics";
+import ParentPerfromance from "./Performance/ReRenderingExample/Parent";
 
 function App() {
   // State .... name
@@ -130,7 +132,13 @@ function App() {
 
       {/* USE REDUCER EXPLANATION */}
 
-      <CounterReducer />
+      {/* <CounterReducer /> */}
+
+      {/* PERFORMANCE */}
+
+      {/* <BasicComponent /> */}
+
+      <ParentPerfromance />
     </>
   );
 }
