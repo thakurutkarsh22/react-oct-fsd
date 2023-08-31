@@ -49,38 +49,90 @@ function Counter() {
   );
 }
 
+// ---------------- COUNTER REDUCER ------------------------
+
 const defaultState = {
   counter: 0,
   loading: false,
-  name: "utkarsh",
+  name: "Calculator action",
+};
+
+// ACTIONS Objects ------
+
+const IncrementAction = {
+  type: "INCREMENT",
+};
+
+const DecrementAction = {
+  type: "DECREMENT",
+};
+
+const ResetAction = {
+  type: "RESET",
 };
 
 // is responsible for State change (police)
-function counterReducerFunction() {
-  // what instruction we are getting
-  // lathi
-  // firing
-  // ba
+//  THIS IS REDUCER FUNCTION
+function counterReducerFunction(state, action) {
+  console.log(state, "oldState");
+  switch (action.type) {
+    case "INCREMENT": // lathicharge sec 144
+      return {
+        ...state,
+        counter: state.counter + 1,
+        name: "Increment",
+      };
+    case "DECREMENT": // barrigate sec 500
+      return {
+        ...state,
+        counter: state.counter - 1,
+        name: "Decrement",
+      };
+
+    case "RESET": // shooting // 420
+      return {
+        ...state,
+        counter: 0,
+        name: "Reset",
+      };
+
+    default:
+      return state;
+  }
 }
 
 function CounterReducer() {
   const [val, setVal] = useState(0);
 
+  //   phone, car, Newpapaer, fax
   const [state, dispatch] = useReducer(counterReducerFunction, defaultState);
 
+  console.log("render");
   return (
     <>
       {state.name}
       <div>Counter: {state.counter}</div>
       <button
         onClick={() => {
-          dispatch("Instruction/actions");
+          dispatch(IncrementAction); // debugger
         }}
       >
         +1
       </button>
-      <button onClick={() => {}}>-1</button>
-      <button onClick={() => {}}>Reset</button>
+      <button
+        onClick={() => {
+          dispatch(DecrementAction);
+        }}
+      >
+        -1
+      </button>
+      <button
+        onClick={() => {
+          dispatch(ResetAction);
+        }}
+      >
+        Reset
+      </button>
     </>
   );
 }
