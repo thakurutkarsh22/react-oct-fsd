@@ -14,6 +14,7 @@ import PortalDialogBox from "./Portal/Portal";
 import LazyLoading from "./Performance/LazyLoading/LazyLoading";
 import LazyLoadingCustomHooks from "./CustomHooks/useToggle/Problem/LazyLoading";
 import UseLocalStorageFormsApp from "./CustomHooks/useLocalStorage.js/useLocalStorageFormsApp";
+import LoginForm from "./AuthApp/components/LoginForm";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 // This is where the vitual dom Root is created from the REAL DOm (Basically it is a light copy of real dom node...).
@@ -41,7 +42,11 @@ root.render(
       <LazyLoadingCustomHooks />
     </BrowserRouter> */}
 
-    <UseLocalStorageFormsApp />
+    {/* <UseLocalStorageFormsApp /> */}
+
+    {/* ------------ LOGIN ------ FORMS --------- */}
+
+    <LoginForm />
   </React.StrictMode>
 );
 
