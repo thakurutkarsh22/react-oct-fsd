@@ -9,6 +9,8 @@ function useToggle(initialValue = false) {
     setVal((old) => !old);
   });
 
+  //
+
   return [val, memoToggleFunction];
 }
 

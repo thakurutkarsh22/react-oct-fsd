@@ -12,6 +12,9 @@ function useLocalStorage() {
 
   useEffect(() => {
     window.localStorage.setItem("name", name);
+
+    // api -> cool
+    // bad -> add own things //
   }, [name]);
 
   return [name, setName];
