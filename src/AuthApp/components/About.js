@@ -1,3 +1,7 @@
+import { useContext } from "react";
+import UserContext from "../contexts/userContext";
+import { Navigate } from "react-router-dom";
+
 function About() {
   return (
     <div>

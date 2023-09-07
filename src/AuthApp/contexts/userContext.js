@@ -2,13 +2,7 @@ import { createContext } from "react";
 
 // ACT LIKE GLOBAL STORAGE...
 
-const UserContext = createContext({
-  userName: "utkarsh",
-  hasUserLoginError: false,
-
-  login: () => {},
-  logout: () => {},
-});
+const UserContext = createContext();
 
 export default UserContext;
 

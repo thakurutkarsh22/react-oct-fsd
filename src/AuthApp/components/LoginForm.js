@@ -1,14 +1,21 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
+import UserContext from "../contexts/userContext";
 
 function LoginForm() {
   // USE CONTEXT
   // GET SOMETHING FROM CONTEXT
+
+  const userContex = useContext(UserContext);
+
+  const loginFunction = userContex.login;
 
   const [userName, setUsername] = useState();
   const [password, setPassword] = useState();
 
   function onSumbitForm(event) {
     event.preventDefault();
+
+    loginFunction({ userName, password });
   }
 
   return (
@@ -24,7 +31,9 @@ function LoginForm() {
             type="text"
             value={userName}
             placeholder="admin"
-            onChange={() => {}}
+            onChange={(e) => {
+              setUsername(e.target.value);
+            }}
             name="name"
             id="name"
           />
@@ -36,7 +45,9 @@ function LoginForm() {
             type="password"
             value={password}
             placeholder="password"
-            onChange={() => {}}
+            onChange={(e) => {
+              setPassword(e.target.value);
+            }}
             id="password"
           />
         </div>
