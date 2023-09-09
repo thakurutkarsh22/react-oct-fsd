@@ -1,5 +1,5 @@
 import { useDispatch, useSelector } from "react-redux";
-import TOGGLE_ACTION from "./actions/action";
+import TOGGLE_ACTION_OBJECT from "../actions/action";
 
 function BasicReduxAppFunctional() {
   // GET the value from Store
@@ -20,7 +20,7 @@ function BasicReduxAppFunctional() {
         <div>
           <button
             onClick={() => {
-              dispatch(TOGGLE_ACTION());
+              dispatch(TOGGLE_ACTION_OBJECT());
             }}
           >
             Click ME !

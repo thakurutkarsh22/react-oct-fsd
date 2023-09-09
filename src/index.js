@@ -16,10 +16,12 @@ import LazyLoadingCustomHooks from "./CustomHooks/useToggle/Problem/LazyLoading"
 import UseLocalStorageFormsApp from "./CustomHooks/useLocalStorage.js/useLocalStorageFormsApp";
 import LoginForm from "./AuthApp/components/LoginForm";
 import AuthApp from "./AuthApp/AuthApp";
-import BasicReduxAppFunctional from "./Redux/BasicRedux/BasicReduxAppFunctional";
+import BasicReduxAppFunctional from "./Redux/BasicRedux/FunctionalCompoenentApp/BasicReduxAppFunctional";
 import { Provider } from "react-redux";
 import basicReduxStore from "./Redux/BasicRedux/store/store";
-import ExampleComponent from "./Redux/BasicRedux/ExampleComponent";
+
+import BasicReduxAppClass from "./Redux/BasicRedux/ClassComponentApp/BasicReduxAppClass";
+import ExampleComponent from "./Redux/BasicRedux/FunctionalCompoenentApp/ExampleComponent";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 // This is where the vitual dom Root is created from the REAL DOm (Basically it is a light copy of real dom node...).
@@ -64,6 +66,9 @@ root.render(
     <Provider store={basicReduxStore()}>
       <BasicReduxAppFunctional />
       <ExampleComponent />
+
+      {/* class component */}
+      <BasicReduxAppClass />
     </Provider>
   </React.StrictMode>
 );
