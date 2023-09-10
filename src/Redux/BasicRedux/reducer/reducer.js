@@ -14,6 +14,9 @@ function toggleReducer(state = DEFAULT_STORE_STATE, action) {
     case ACTIONS_TYPE.TOGGLE:
       return { ...state, toggle: !state.toggle };
 
+    case ACTIONS_TYPE.LOADING:
+      return { ...state, loading: false };
+
     default:
       return state;
   }

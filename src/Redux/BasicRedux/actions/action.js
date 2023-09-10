@@ -1,5 +1,7 @@
 import ACTIONS_TYPE from "./actionTypes/actionTypes";
 
+// Action Creator ....
+
 const TOGGLE_ACTION_OBJECT = (data) => {
   return {
     type: ACTIONS_TYPE.TOGGLE,
