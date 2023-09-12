@@ -22,6 +22,12 @@ import basicReduxStore from "./Redux/BasicRedux/store/store";
 
 import BasicReduxAppClass from "./Redux/BasicRedux/ClassComponentApp/BasicReduxAppClass";
 import ExampleComponent from "./Redux/BasicRedux/FunctionalCompoenentApp/ExampleComponent";
+import CounterRedux from "./Redux/Redux-Toolkit/Redux-Counter/ReduxCounter";
+import bigStore, {
+  counterSlice,
+} from "./Redux/Redux-Toolkit/Redux-Counter/store/store";
+import githubStore from "./Redux/GithuReduxApp/store/githubstore";
+import GithubComponent from "./Redux/GithuReduxApp/githubComponent";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 // This is where the vitual dom Root is created from the REAL DOm (Basically it is a light copy of real dom node...).
@@ -63,12 +69,21 @@ root.render(
 
     {/*  */}
 
-    <Provider store={basicReduxStore()}>
+    {/* <Provider store={basicReduxStore()}>
       <BasicReduxAppFunctional />
       <ExampleComponent />
 
-      {/* class component */}
+      class component
       <BasicReduxAppClass />
+    </Provider> */}
+
+    {/* <Provider store={bigStore}>
+      <CounterRedux />
+    </Provider>
+  </React.StrictMode> */}
+
+    <Provider store={githubStore()}>
+      <GithubComponent />
     </Provider>
   </React.StrictMode>
 );

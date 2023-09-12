@@ -17,6 +17,9 @@ function toggleReducer(state = DEFAULT_STORE_STATE, action) {
     case ACTIONS_TYPE.LOADING:
       return { ...state, loading: false };
 
+    // case "save_name":
+    //     return {user: ""}
+
     default:
       return state;
   }

@@ -2,12 +2,26 @@ import { configureStore, createSlice } from "@reduxjs/toolkit";
 
 // --------- slice --------------
 
-const counterSlice = createSlice({
+export const formsSlice = createSlice({
+  name: "formSlice",
+  initialState: { touched: false, editied: false },
+  reducers: {
+    touche(state) {
+      state.touched = true;
+    },
+
+    edit(state) {
+      state.editied = true;
+    },
+  },
+});
+
+export const counterSlice = createSlice({
   name: "counter",
-  initialState: { counter: 0 },
+  initialState: { counter: 100 },
   reducers: {
     increment(state, action) {
-      //   state.counter += 1; // mutation
+      state.counter += 1; // mutation
       // behind the scenes redux tool kit is creating the new Object for state and then mutating the value in that new STATE obj
       // return { // pobject
       //     ...state,
@@ -31,7 +45,11 @@ const counterSlice = createSlice({
 
 //  Mall
 const bigStore = configureStore({
-  counterReducer: counterSlice.reducers,
+  reducer: {
+    counterReducer: counterSlice.reducer,
+    formsreducer: formsSlice.reducer,
+  },
+  //   reducer: counterSlice.reducers,
 });
 
 export default bigStore;
