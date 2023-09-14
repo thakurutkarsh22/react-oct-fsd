@@ -20,6 +20,9 @@ function toggleReducer(state = DEFAULT_STORE_STATE, action) {
     // case "save_name":
     //     return {user: ""}
 
+    // case api_call:
+    //     return fetch("github.com/thakurutkars22")
+
     default:
       return state;
   }

@@ -9,6 +9,7 @@ const TOGGLE_ACTION_OBJECT = (data) => {
   };
 };
 
+// actioni crw
 export const LOADING_ACTION_OBJECT = (data) => {
   return {
     type: ACTIONS_TYPE.LOADING,
@@ -16,7 +17,7 @@ export const LOADING_ACTION_OBJECT = (data) => {
 };
 
 //  DO not use this always use the Action type.
-
+// action creator
 export const POKEMON_OBJECT = (data) => {
   return {
     type: "abcd",
