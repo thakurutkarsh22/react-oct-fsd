@@ -30,6 +30,8 @@ import githubStore from "./Redux/GithuReduxApp/store/githubstore";
 import GithubComponent from "./Redux/GithuReduxApp/githubComponent";
 import CounterUndoRedo from "./Redux/UndoRedoComponent/CounterUndoRedoRedux";
 import undoRedoStore from "./Redux/UndoRedoComponent/store";
+import FolderStructure from "./InterviewQuestions/FolderStructure/ForderStructure";
+import folderStructure from "./InterviewQuestions/FolderStructure/data";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 // This is where the vitual dom Root is created from the REAL DOm (Basically it is a light copy of real dom node...).
@@ -87,9 +89,15 @@ root.render(
       <GithubComponent />
     </Provider> */}
 
-    <Provider store={undoRedoStore}>
+    {/* <Provider store={undoRedoStore}>
       <CounterUndoRedo />
-    </Provider>
+    </Provider> */}
+
+    {/* -------------------  INTERVIEW QUESTIONS --------------- */}
+
+    <FolderStructure folderData={folderStructure} />
+
+    {/* -----------------  INTERVIEW QUESTIONS  END ----------------------  */}
   </React.StrictMode>
 );
 
