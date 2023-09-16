@@ -28,6 +28,8 @@ import bigStore, {
 } from "./Redux/Redux-Toolkit/Redux-Counter/store/store";
 import githubStore from "./Redux/GithuReduxApp/store/githubstore";
 import GithubComponent from "./Redux/GithuReduxApp/githubComponent";
+import CounterUndoRedo from "./Redux/UndoRedoComponent/CounterUndoRedoRedux";
+import undoRedoStore from "./Redux/UndoRedoComponent/store";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 // This is where the vitual dom Root is created from the REAL DOm (Basically it is a light copy of real dom node...).
@@ -79,11 +81,14 @@ root.render(
 
     {/* <Provider store={bigStore}>
       <CounterRedux />
-    </Provider>
-  </React.StrictMode> */}
+    </Provider> */}
 
-    <Provider store={githubStore()}>
+    {/* <Provider store={githubStore()}>
       <GithubComponent />
+    </Provider> */}
+
+    <Provider store={undoRedoStore}>
+      <CounterUndoRedo />
     </Provider>
   </React.StrictMode>
 );
