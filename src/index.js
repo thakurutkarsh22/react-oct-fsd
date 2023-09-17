@@ -32,6 +32,7 @@ import CounterUndoRedo from "./Redux/UndoRedoComponent/CounterUndoRedoRedux";
 import undoRedoStore from "./Redux/UndoRedoComponent/store";
 import FolderStructure from "./InterviewQuestions/FolderStructure/ForderStructure";
 import folderStructure from "./InterviewQuestions/FolderStructure/data";
+import TicTacToe from "./InterviewQuestions/TicTacToe/TicTacToe";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 // This is where the vitual dom Root is created from the REAL DOm (Basically it is a light copy of real dom node...).
@@ -95,7 +96,8 @@ root.render(
 
     {/* -------------------  INTERVIEW QUESTIONS --------------- */}
 
-    <FolderStructure folderData={folderStructure} />
+    {/* <FolderStructure folderData={folderStructure} /> */}
+    <TicTacToe />
 
     {/* -----------------  INTERVIEW QUESTIONS  END ----------------------  */}
   </React.StrictMode>
