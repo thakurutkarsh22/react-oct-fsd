@@ -1,38 +1,37 @@
 .app {
-    /* text-align: center; */
-    padding: 20px 90px;
-    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-    display: flex;
-    justify-content: flex-start;
-  }
-  img {
+  /* text-align: center; */
+  padding: 20px 90px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  display: flex;
+  justify-content: flex-start;
+}
+/* img {
     height: 400px;
     width: 400px;
-  }
-  .container {
-    padding: 15px 20px;
-    border: 2px solid black;
-    border-radius: 10px;
-    font-size: 20px;
-    margin: 20px 20px;
-    display: flex;
-    justify-content: space-between;
-    width: 350px;
-    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-  }
-  .selected {
-    padding: 15px 20px;
-    border-radius: 10px;
-    font-size: 20px;
-    margin: 20px 20px;
-    display: flex;
-    justify-content: space-between;
-    width: 350px;
-    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-    border: 3px solid rgb(37, 94, 252);
-  }
-  #finalPrice {
-    margin: 20px 20px;
-    font-size: 30px;
-  }
-  
+  } */
+.container {
+  padding: 15px 20px;
+  border: 2px solid black;
+  border-radius: 10px;
+  font-size: 20px;
+  margin: 20px 20px;
+  display: flex;
+  justify-content: space-between;
+  width: 350px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+.selected {
+  padding: 15px 20px;
+  border-radius: 10px;
+  font-size: 20px;
+  margin: 20px 20px;
+  display: flex;
+  justify-content: space-between;
+  width: 350px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  border: 3px solid rgb(37, 94, 252);
+}
+#finalPrice {
+  margin: 20px 20px;
+  font-size: 30px;
+}
