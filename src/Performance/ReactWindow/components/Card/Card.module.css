@@ -1,0 +1,23 @@
+.card-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+
+  background-color: aqua;
+}
+
+.card-info {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cardImage {
+  border-radius: 50%;
+  height: 100px;
+  width: 100px;
+}

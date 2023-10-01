@@ -24,6 +24,7 @@ import PortalDialogBox from "./Portal/Portal";
 import CounterReducer from "./ClassComponentIntro/IncDecCounterReducer";
 import BasicComponent from "./Performance/basics/basics";
 import ParentPerfromance from "./Performance/ReRenderingExample/Parent";
+import ReactWindowApp from "./Performance/ReactWindow/ReactWindowApp";
 
 function App() {
   // State .... name
@@ -134,11 +135,13 @@ function App() {
 
       {/* <CounterReducer /> */}
 
-      {/* PERFORMANCE */}
+      {/* ------------------  PERFORMANCE ------------------- */}
 
       {/* <BasicComponent /> */}
 
-      <ParentPerfromance />
+      {/* <ParentPerfromance /> */}
+
+      <ReactWindowApp />
     </>
   );
 }
