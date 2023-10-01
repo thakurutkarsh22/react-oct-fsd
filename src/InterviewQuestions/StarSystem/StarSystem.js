@@ -53,3 +53,5 @@ function StarSystem(props) {
 }
 
 export default StarSystem;
+
+// TODO: utkarsh do the half star ...
